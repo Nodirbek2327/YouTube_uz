@@ -1,0 +1,3 @@
+  ### Create TAG
+POST localhost:8080//api/v1/category/create
+Content-Type:  application/json

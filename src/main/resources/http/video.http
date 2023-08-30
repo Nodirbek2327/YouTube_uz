@@ -1,0 +1,32 @@
+### Create
+POST http://localhost:8080/api/v1/video/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTIwMDMwMjYsImlkIjoxLCJlbWFpbCI6ImJla3pvZG5vc2lyb3YwMkBnbWFpbC5jb20iLCJleHAiOjE2OTIwODk0MjYsImlzcyI6InlvdV90dWJlX3V6IHRlc3QifQ.iU3_lVCiAzmJwNM2TO59KKwe-R78DWQUH6FQi29lZmPd41_TWOBFtskZFf_x-UilLDwt3bcqguDcSDYWh6ecrw
+
+{
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

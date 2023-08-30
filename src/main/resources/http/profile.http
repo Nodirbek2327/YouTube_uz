@@ -1,0 +1,29 @@
+### create profile
+POST localhost:8082/api/v1/profile/create
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTE3NTcwODIsImlkIjo2LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkxODQzNDgyLCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.eN_WK-8VVxcKH3fMS1C1w8asO5ijaUFFOeJSfsa7t9YesQ9XZmnzjNO1TZW8F2QLxIXf8SErlYGltXzLwYeaDg
+Content-Type: application/json
+
+{
+  "name": "Ali",
+  "surname":"Aliyev",
+  "password": 12345,
+  "role": "ROLE_MODERATOR",
+  "email": "diyorbekhamidov0519@gmail.com",
+  "imageId": "0b241956-acd0-4d2f-b4af-2fec2745b539"
+}
+### get detail
+GET localhost:8082/api/v1/profile/getDetail/2
+
+###  update main photo
+PUT localhost:8082/api/v1/profile/updateMainPhoto?id=2&photoId=3d7ce058-ee19-40b2-bc52-6ddbce67702e
+
+### update detail
+PUT localhost:8082/api/v1/profile/updateProfileDetail?id=2&name=Vali&surname=Valiyev
+
+### change password
+PUT localhost:8082/api/v1/profile/changePassword?id=2&password=12345
+
+### update email
+POST localhost:8082/api/v1/profile/updateEmail?email=diyorbekhamidov682@gmail.com
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTE3NTcwODIsImlkIjo2LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkxODQzNDgyLCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.eN_WK-8VVxcKH3fMS1C1w8asO5ijaUFFOeJSfsa7t9YesQ9XZmnzjNO1TZW8F2QLxIXf8SErlYGltXzLwYeaDg
+

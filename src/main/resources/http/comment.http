@@ -1,0 +1,38 @@
+### 1. Crate Comment (USER)
+POST localhost:8080/api/v1/comment
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTI2MDY2MzYsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyNjkzMDM2LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.lRh1LFqB9iMACZrhhhrF9PSu-WAhSxXa7l2i3dmRgxi2HMinc30hJ2u9RIn-d5FnNHCYRkXLASI3QNNXrQ1DOw
+Content-Type: application/json
+
+{
+  "videoId": "video111",
+  "content": "reply for comment3",
+  "replyId": "fee89018-21aa-47e0-b6f7-0d7d58cb608e"
+}
+
+###  2. Update Comment (USER AND OWNER)
+PUT localhost:8080/api/v1/comment/fee89018-21aa-47e0-b6f7-0d7d58cb608e
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTI2MDY2MzYsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyNjkzMDM2LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.lRh1LFqB9iMACZrhhhrF9PSu-WAhSxXa7l2i3dmRgxi2HMinc30hJ2u9RIn-d5FnNHCYRkXLASI3QNNXrQ1DOw
+Content-Type: application/json
+
+{
+  "content": "comment is updated"
+}
+
+###  3. Delete Comment (USER AND OWNER, ADMIN)
+DELETE localhost:8080/api/v1/comment/9c9aa853-b226-4f58-a052-3c45cd68f0d6
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTI2MDY2MzYsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyNjkzMDM2LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.lRh1LFqB9iMACZrhhhrF9PSu-WAhSxXa7l2i3dmRgxi2HMinc30hJ2u9RIn-d5FnNHCYRkXLASI3QNNXrQ1DOw
+
+### 4. Comment List Pagination (ADMIN)
+GET localhost:8080/api/v1/comment/pagination?page=1&size=10
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTI2MDY2MzYsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyNjkzMDM2LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.lRh1LFqB9iMACZrhhhrF9PSu-WAhSxXa7l2i3dmRgxi2HMinc30hJ2u9RIn-d5FnNHCYRkXLASI3QNNXrQ1DOw
+
+###  5. Comment List By profileId(ADMIN)
+GET localhost:8080/api/v1/comment/listByProfileId/5
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTI2MDY2MzYsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyNjkzMDM2LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.lRh1LFqB9iMACZrhhhrF9PSu-WAhSxXa7l2i3dmRgxi2HMinc30hJ2u9RIn-d5FnNHCYRkXLASI3QNNXrQ1DOw
+### 6.  Comment List By Profile
+GET localhost:8080/api/v1/comment/listbyOwner
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTI2MDY2MzYsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyNjkzMDM2LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.lRh1LFqB9iMACZrhhhrF9PSu-WAhSxXa7l2i3dmRgxi2HMinc30hJ2u9RIn-d5FnNHCYRkXLASI3QNNXrQ1DOw
+###7. Comment List by videoId
+GET localhost:8080/api/v1/comment/public/byVideoId/video111
+###  8. Get Comment Replied Comment by comment Id
+GET localhost:8080/api/v1/comment/public/repliedComment/fee89018-21aa-47e0-b6f7-0d7d58cb608e

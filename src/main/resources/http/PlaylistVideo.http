@@ -1,0 +1,28 @@
+###  1. Create (User and Owner)
+POST localhost:8080/api/v1/playlistVideo
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTE5NDgyNDcsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyMDM0NjQ3LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.SGOab1RZsKvg7I7cJv4nwGXyMegTaspr_wScV-hNxX65QP46bwhfFl2vqA5B-DNoi6_2Blm8Ct5qQdeiUPRIlw
+Content-Type: application/json
+
+{
+  "playlistId": "7133a26e-ce8b-452e-93db-dbfee0cb2992",
+  "videoId": "4d75d06c-058d-4055-99b0-984635d751b5",
+  "orderNumber": 3
+}
+
+###  2. Update
+PUT localhost:8080/api/v1/playlistVideo
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTE5NDgyNDcsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyMDM0NjQ3LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.SGOab1RZsKvg7I7cJv4nwGXyMegTaspr_wScV-hNxX65QP46bwhfFl2vqA5B-DNoi6_2Blm8Ct5qQdeiUPRIlw
+Content-Type: application/json
+
+{
+  "playlistId": "7133a26e-ce8b-452e-93db-dbfee0cb2992",
+  "videoId": "4d75d06c-058d-4055-99b0-984635d751b5",
+  "orderNumber": 3
+}
+### 3. Delete PlayListVideo
+DELETE localhost:8080/api/v1/playlistVideo?playlistId=7133a26e-ce8b-452e-93db-dbfee0cb2992&videoId=4d75d06c-058d-4055-99b0-984635d751b5
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTE5NDgyNDcsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyMDM0NjQ3LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.SGOab1RZsKvg7I7cJv4nwGXyMegTaspr_wScV-hNxX65QP46bwhfFl2vqA5B-DNoi6_2Blm8Ct5qQdeiUPRIlw
+
+### 4. Get Video list by playListId (video status published)
+GET localhost:8080/api/v1/playlistVideo/7133a26e-ce8b-452e-93db-dbfee0cb2992
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2OTE5NDgyNDcsImlkIjo1LCJlbWFpbCI6InJ1bm5lcnBybzE5OTBAZ21haWwuY29tIiwiZXhwIjoxNjkyMDM0NjQ3LCJpc3MiOiJ5b3VfdHViZV91eiB0ZXN0In0.SGOab1RZsKvg7I7cJv4nwGXyMegTaspr_wScV-hNxX65QP46bwhfFl2vqA5B-DNoi6_2Blm8Ct5qQdeiUPRIlw

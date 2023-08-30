@@ -1,0 +1,2 @@
+ INSERT INTO profile (id, name, surname, email, password, role, status, language, visible, created_date)
+ VALUES(100, 'Nodirbek', 'Hasanov', 'hasanovnodir0703@gmail.com', '1234', 'ROLE_ADMIN', 'ACTIVE', 'uz', true, current_time);
